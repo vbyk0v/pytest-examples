@@ -3,14 +3,13 @@ import os
 
 
 def main():
-    testdir = os.getcwd() + '\\tests'
+    testdir = str(os.getcwd() + '\\tests\\')
     print(testdir)
 
-    args = ['--verbose',  # detailed view
-            '-s',  # stdout view
+    args = [testdir,
+            '--verbose',  # detailed view
             '--capture=sys',
-            '-rp',
-            testdir]  # tests location
+            '-s']  # print stdout
     pytest.main(args=args)
 
 
