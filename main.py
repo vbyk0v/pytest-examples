@@ -9,7 +9,8 @@ def main():
     args = [testdir,
             '--verbose',  # detailed view
             '--capture=sys',
-            '-s']  # print stdout
+            '-s',  # print stdout
+            '-v']  # verbose
     pytest.main(args=args)
 
 
